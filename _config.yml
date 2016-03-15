@@ -1,0 +1,29 @@
+url: https://smash.rs
+excerpt_separator: '<!--resumo-->'
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# gems
+gems:
+  - jekyll-paginate
+
+# jekyll-paginate configs
+paginate: 2
+# paginate_path: '/page:num'
+
+# sass
+sass:
+  style: compressed
+
+# Exclude from Jekyll build
+exclude:
+  - Gemfile
+  - LICENSE
+  - README
+  - "*.sublime-*"

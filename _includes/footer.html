@@ -1,0 +1,126 @@
+					</div>
+					<div class="col-md-4 mag-inner-right sidebar">
+						<div class="module discord">
+							<div class="module-content">
+								<iframe class="img-responsive" src="https://discordapp.com/widget?id=71069926382641152&theme=light"></iframe>
+							</div>
+						</div>
+						<br>
+						<div class="module social">
+							{% if site.data.info.social %}
+								<h4 class="side">Redes Sociais</h4>
+								<ul class="list-group">
+									{% for network in site.data.info.social %}
+										<li class="list-group-item {{network.icon}}"><h5><a href="{{network.url}}" target="_blank"><i></i>{{network.title}}</a></h5></li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-section">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-4 footer-grid">
+					<h4>Últimos vídeos</h4>
+					<div class="editor-pics">
+						<div class="col-md-3 item-pic">
+							<img src="//i.ytimg.com/vi/dpAsjAQDh1w/maxresdefault.jpg" class="img-responsive" alt=""/>
+						</div>
+						<div class="col-md-9 item-details">
+							<h5 class="inner"><a href="#">Top 10 Little Mac Suicides</a></h5>
+							<div class="td-post-date">Feb 22, 2015</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="editor-pics">
+						<div class="col-md-3 item-pic">
+							<img src="//gamehall.uol.com.br/v10/wp-content/uploads/2015/12/corrin-smash-bros.jpg" class="img-responsive" alt=""/>
+						</div>
+						<div class="col-md-9 item-details">
+							<h5 class="inner"><a href="#">Corrin OP</a></h5>
+							<div class="td-post-date">Feb 22, 2015</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="editor-pics">
+						<div class="col-md-3 item-pic">
+							<img src="//gamehall.uol.com.br/v10/wp-content/uploads/2010/03/bayonetta.jpg" class="img-responsive" alt=""/>
+						</div>
+						<div class="col-md-9 item-details">
+							<h5 class="inner"><a href="#">Primeiras impressões de Bayonetta</a></h5>
+							<div class="td-post-date">Feb 22, 2015</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<h4>Próximos eventos</h4>
+					<div class="editor-pics">
+						<div class="col-md-3 item-pic">
+							<img src="//3.bp.blogspot.com/-9O72SRXHUII/VRla3vTE9yI/AAAAAAAAFP4/z6Mljrz8gUg/s1600/anime_buzz___work_number_03_by_rafeproject-d65g7n9.jpg" class="img-responsive" alt=""/>
+						</div>
+						<div class="col-md-9 item-details">
+							<h5 class="inner"><a href="#">Anime Buzz</a></h5>
+							<div class="td-post-date">Feb 22, 2015</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="editor-pics">
+						<div class="col-md-3 item-pic">
+							<img src="//plannify.com/cdn/image?i=%2Fevent%2F1393723%2Fdreamfest_animes_e_games_2_edicao&r=img&d=%2F_%2Fimg%2Fno-pic-photo.png" class="img-responsive" alt=""/>
+
+						</div>
+						<div class="col-md-9 item-details">
+							<h5 class="inner"><a href="#">Dreamfest</a></h5>
+							<div class="td-post-date">Feb 22, 2015</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="editor-pics">
+						<div class="col-md-3 item-pic">
+							<img src="//fastfoodcultural.com.br/wp-content/uploads/2015/04/Anime.jpg" class="img-responsive" alt=""/>
+
+						</div>
+						<div class="col-md-9 item-details">
+							<h5 class="inner"><a href="#">Animextreme</a></h5>
+							<div class="td-post-date">Feb 22, 2015</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<h4>Categorias</h4>
+					<ul class="td-pb-padding-side">
+						<li><a href="#">Evento<span class="td-cat-no">15</span></a></li>
+						<li><a href="#">Placar<span class="td-cat-no">14</span></a></li>
+						<li><a href="#">Vídeo<span class="td-cat-no">14</span></a></li>
+						<li><a href="#">Notícia<span class="td-cat-no">14</span></a></li>
+						<li><a href="#">Guia<span class="td-cat-no">14</span></a></li>
+						<li><a href="#">Exclusivo<span class="td-cat-no">14</span></a></li>
+						<li><a href="#">Entrevista<span class="td-cat-no">14</span></a></li>
+						<li><a href="#">Twitch<span class="td-cat-no">13</span></a></li>
+						<li><a href="#">Cobertura<span class="td-cat-no">13</span></a></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<p>&copy; {{site.data.info.since}}<script>new Date().getFullYear()>{{site.data.info.since}}&&document.write(" - "+new Date().getFullYear());</script> {{site.data.info.copyright}} | {{site.data.info.credits}} </p>
+	</div>
+
+
+	<a href="#top" id="toTop"> <span id="toTopHover"> </span></a>
+
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-3.1.1.min.js"></script>
+</body>
+</html>

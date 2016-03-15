@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="row">
+	{% for post in paginator.posts %}
+		{% assign thumbnail_exists = false %}
+		{% for file in site.static_files %}
+			{% capture image_path %}/images/posts/{{post.image}}{% endcapture %}
+			{% if file.path == image_path %}
+				{% assign thumbnail_exists = true %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+		<div class="post{% if forloop.index != 1 %} separate{% endif %}">
+			<br>
+			{% if thumbnail_exists %}
+				<div class="col-md-6 b-img"><a href="{{ post.url }}"><img class="img-responsive" src="/images/posts/{{ post.image }}" alt="{{ post.title }}"/></a></div>
+				<div class="col-md-6 b-text">
+			{% else %}
+				<div class="col-md-12 b-text">
+			{% endif %}
+				<h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+				<h6>
+					<i class="glyphicon glyphicon-calendar"></i>{{ post.date | date: "%d/%m/%Y" }}
+					<i class="glyphicon glyphicon-user"></i>{{ post.author }}
+				</h6>
+				<div class="clearfix"></div>
+				<p>{{ post.excerpt | remove: '<p>' | remove: '</p>' | strip_html }}</p>
+				<a class="read" href="{{ post.url }}">Leia Mais</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	{% endfor %}
+</div>
+<br>
+<div>
+	<h4>
+		<a class="btn btn-info previous {% unless paginator.previous_page %}invisible{% endunless %}" {% unless paginator.previous_page %}onclick="return false;"{% endunless %} href="{{ paginator.previous_page_path }}">
+			<i class="glyphicon glyphicon-chevron-left"></i> Anterior
+		</a>
+
+		<a class="btn btn-info next pull-right {% unless paginator.next_page %}invisible{% endunless %}" {% unless paginator.next_page %}onclick="return false;"{% endunless %} href="{{ paginator.next_page_path }}">
+			Próximo <i class="glyphicon glyphicon-chevron-right"></i>
+		</a>
+	</h4>
+</div>

@@ -1,0 +1,33 @@
+# Site
+title: SmashRS
+email: forsureitsme@gmail.com #smashrs1@gmail.com
+description: "Comunidade Riograndense de Super Smash Brothers dedicada ao aspecto competitivo do jogo."
+
+# Color
+color:
+  primary: '#f71864'
+  secondary: '#4fabd6'
+
+# Social networks
+social:
+  - title: Discord
+    url: https://discord.gg/0ObzpaxXMDkrHhnX
+    icon: discord
+  - title: Youtube
+    url: https://www.youtube.com/user/smashrs1
+    icon: youtube
+  - title: Twitter
+    url: http://twitter.com/_SmashRS
+    icon: twitter
+  - title: Grupo no Facebook
+    url: https://www.facebook.com/groups/1479828748958439/
+    icon: facebook
+  - title: Página no Facebook
+    url: https://www.facebook.com/Smash-RS-430935083639064/
+    icon: facebook
+
+
+# Footer
+copyright: SmashRS
+since: 2007
+credits: 'Desenvolvido por <a href="//github.com/forsureitsme">Pedro Cardoso da Silva (@forsureitsme)</a>'

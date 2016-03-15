@@ -1,0 +1,33 @@
+---
+---
+{% include header.html %}
+{% assign post = page %}
+<div class="row full-post">
+	{% assign thumbnail_exists = false %}
+		{% for file in site.static_files %}
+			{% capture image_path %}/images/posts/{{post.image}}{% endcapture %}
+			{% if file.path == image_path %}
+				{% assign thumbnail_exists = true %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+
+	{% if thumbnail_exists %}
+		<div class="with-thumbnail">
+			<img class="img-responsive" src="/images/posts/{{ post.image }}" alt="{{ post.title }}"/>
+	{% endif %}
+		<h1 class="text-center title">
+			{{post.title}}
+			<br>
+			<small>
+				<i class="glyphicon glyphicon-calendar"></i>{{ post.date | date: "%d/%m/%Y" }}
+				 -
+				<i class="glyphicon glyphicon-user"></i>{{ post.author }}
+			</small>
+		</h1>
+	{% if thumbnail_exists %}
+		</div>
+	{% endif %}
+	{{content}}
+</div>
+{% include footer.html %}
