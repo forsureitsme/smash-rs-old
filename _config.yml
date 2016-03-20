@@ -1,6 +1,8 @@
 url: https://smash.rs
 excerpt_separator: '<!--resumo-->'
 
+baseurl: '/smash-rs'
+
 defaults:
   -
     scope:

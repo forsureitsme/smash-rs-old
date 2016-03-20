@@ -5,8 +5,14 @@ description: "Comunidade Riograndense de Super Smash Brothers dedicada ao aspect
 
 # Color
 color:
-  primary: '#f71864'
-  secondary: '#4fabd6'
+  - key: 'primary'
+    value: '#f71864'
+  - key: 'secondary'
+    value: '#4fabd6'
+  - key: 'text'
+    value: '#282828'
+  - key: 'text-inverse'
+    value: 'white'
 
 # Social networks
 social:

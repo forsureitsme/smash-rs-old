@@ -1,25 +1,14 @@
 ---
 ---
-
-// Site colors
-$site-color-primary: {{ site.data.info.color.primary }};
-$site-color-secondary: {{ site.data.info.color.secondary }};
-
-// Header
-$header-video-height: 320px;
-$header-video-blur: 2px;
+{% for color in site.data.info.color %}
+$site-color-{{ color.key }}: {{ color.value }};
+.color-{{ color.key }} {
+    color: {{ color.value }};
+}
+{% endfor %}
 
 @import "bootstrap-3.1.1.min";
 @import "template";
-
-@each $name, $color in(
-    'primary' $site-color-primary,
-    'secondary' $site-color-secondary,
-) {
-    .color-#{$name} {
-        color: $color;
-    }
-}
 
 @font-face {
 	font-family: 'SuperSmash';
@@ -27,6 +16,10 @@ $header-video-blur: 2px;
 	font-weight: normal;
 	font-style: normal;
 }
+
+// Header
+$header-video-height: 320px;
+$header-video-blur: 2px;
 
 .font-smash
 {
@@ -180,6 +173,19 @@ $header-video-blur: 2px;
 	}
 }
 
+.last-videos
+{
+	a
+	{
+		color: $site-color-text-inverse;
+	}
+
+	.td-post-date
+	{
+		color: $site-color-secondary;
+	}
+}
+
 #toTop
 {
 	display: block;
@@ -191,8 +197,39 @@ $header-video-blur: 2px;
 
 .full-post
 {
+	padding: 30px;
+
 	.with-thumbnail
 	{
-		
+		position: relative;
+
+		&:before
+		{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(transparent, #FFFFFF);
+		}
+
+		.title
+		{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+
+			a
+			{
+				color: $site-color-text;
+
+				&:hover
+				{
+					color: $site-color-primary;
+				}
+			}
+		}
 	}
 }

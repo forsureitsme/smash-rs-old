@@ -14,10 +14,10 @@
 
 	{% if thumbnail_exists %}
 		<div class="with-thumbnail">
-			<img class="img-responsive" src="/images/posts/{{ post.image }}" alt="{{ post.title }}"/>
+			<img class="img-responsive" src="{{ site.baseurl }}/images/posts/{{ post.image }}" alt="{{ post.title }}"/>
 	{% endif %}
 		<h1 class="text-center title">
-			{{post.title}}
+			<a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
 			<br>
 			<small>
 				<i class="glyphicon glyphicon-calendar"></i>{{ post.date | date: "%d/%m/%Y" }}
@@ -28,6 +28,7 @@
 	{% if thumbnail_exists %}
 		</div>
 	{% endif %}
+	<br><br>
 	{{content}}
 </div>
 {% include footer.html %}
