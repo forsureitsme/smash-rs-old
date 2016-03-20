@@ -17,15 +17,42 @@ $site-color-{{ color.key }}: {{ color.value }};
 	font-style: normal;
 }
 
-// Header
-$header-video-height: 320px;
-$header-video-blur: 2px;
-
 .font-smash
 {
 	font-family: 'SuperSmash';
 }
 
+// Header
+$header-video-height: 320px;
+$header-video-blur: 2px;
+
+/* Don't know why it's not in bootstrap anymore*/
+.embed-responsive {
+	position: relative;
+	display: block;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	.embed-responsive-item,
+	iframe,
+	embed,
+	object {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+	&.embed-responsive-16by9 {
+		padding-bottom: 56.25%;
+	}
+	&.embed-responsive-4by3 {
+		padding-bottom: 75%;
+	}
+}
+/**/
 .navbar-left
 {
 	margin-left: 0;

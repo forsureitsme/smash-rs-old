@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% for section in site.data.videos.sections %}
+	{% assign thumbnail_exists = false %}
+	{% for file in site.static_files %}
+		{% capture image_path %}/images/video-sections/{{section.image}}{% endcapture %}
+		{% if file.path == image_path %}
+			{% assign thumbnail_exists = true %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+	<h3 class="tittle">{{ section.name }}</h3>
+	{% if thumbnail_exists %}
+		<div class="col-md-12">
+			<img src="{{site.baseurl}}{{ image_path }}" class="img-responsive" alt="{{section.name}}"/>
+		</div>
+		<div class="clearfix"></div>
+	{% endif %}
+
+	{% for video in section.videos %}
+		<br>
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{ video.id }}" allowfullscreen frameborder="0"></iframe>
+		</div>
+	{% endfor %}
+{% endfor %}

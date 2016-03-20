@@ -31,10 +31,10 @@
 					{% assign all_videos = '' | split: '|' %}
 					{% for section in site.data.videos.sections %}
 						{% for video in section.videos %}
-							{% assign all_videos = all_videos | push: video %}
+							{% assign all_videos = all_videos | push: video | sort: 'date' | reverse %}
 						{% endfor %}
 					{% endfor %}
-					{% assign last_videos = all_videos | sort: 'date' | reverse | limit: 3 %}
+					{% assign last_videos = all_videos | limit: 3 %}
 					{% for video in last_videos %}
 						<a href="#" class="editor-pics">
 							<div class="col-md-3 item-pic">

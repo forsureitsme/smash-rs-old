@@ -15,7 +15,7 @@ layout: default
 		<div class="post{% if forloop.index != 1 %} separate{% endif %}">
 			<br>
 			{% if thumbnail_exists %}
-				<div class="col-md-6 b-img"><a href="{{ site.baseurl }}{{ post.url }}"><img class="img-responsive" src="{{ site.baseurl }}/images/posts/{{ post.image }}" alt="{{ post.title }}"/></a></div>
+				<div class="col-md-6 b-img"><a href="{{ site.baseurl }}{{ post.url }}"><img class="img-responsive" src="{{ site.baseurl }}{{ image_path }}" alt="{{ post.title }}"/></a></div>
 				<div class="col-md-6 b-text">
 			{% else %}
 				<div class="col-md-12 b-text">
