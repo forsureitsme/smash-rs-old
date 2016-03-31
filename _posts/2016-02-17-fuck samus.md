@@ -1,7 +1,7 @@
 ---
 title: Não seja Samus main
 author: Peter (forsureitsme)
-image: "dont-use-samus.png"
+image: /images/posts/dont-use-samus.png
 ---
 
 O incentivo ao avanço tecnológico, assim como a valorização de fatores subjetivos nos obriga à análise das novas proposições. A certificação de metodologias que nos auxiliam a lidar com a complexidade dos estudos efetuados facilita a criação das posturas dos órgãos dirigentes com relação às suas atribuições.<!--resumo--> Pensando mais a longo prazo, o início da atividade geral de formação de atitudes exige a precisão e a definição do investimento em reciclagem técnica. Percebemos, cada vez mais, que o desafiador cenário globalizado aponta para a melhoria das condições inegavelmente apropriadas.
