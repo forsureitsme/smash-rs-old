@@ -6,8 +6,7 @@ layout: default
 	{% for post in paginator.posts %}
 		{% assign thumbnail_exists = false %}
 		{% for file in site.static_files %}
-			{% capture image_path %}/images/posts/{{post.image}}{% endcapture %}
-			{% if file.path == image_path %}
+			{% if file.path == post.image %}
 				{% assign thumbnail_exists = true %}
 				{% break %}
 			{% endif %}
@@ -15,7 +14,7 @@ layout: default
 		<div class="post{% if forloop.index != 1 %} separate{% endif %}">
 			<br>
 			{% if thumbnail_exists %}
-				<div class="col-md-6 b-img"><a href="{{ site.baseurl }}{{ post.url }}"><img class="img-responsive" src="{{ site.baseurl }}{{ image_path }}" alt="{{ post.title }}"/></a></div>
+				<div class="col-md-6 b-img"><a href="{{ site.baseurl }}{{ post.url }}"><img class="img-responsive" src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}"/></a></div>
 				<div class="col-md-6 b-text">
 			{% else %}
 				<div class="col-md-12 b-text">

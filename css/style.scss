@@ -26,6 +26,10 @@ $site-color-{{ color.key }}: {{ color.value }};
 $header-video-height: 320px;
 $header-video-blur: 2px;
 
+.row {
+	margin: 0 auto;
+}
+
 /* Don't know why it's not in bootstrap anymore*/
 .embed-responsive {
 	position: relative;
@@ -224,8 +228,6 @@ $header-video-blur: 2px;
 
 .full-post
 {
-	padding: 30px;
-
 	.with-thumbnail
 	{
 		position: relative;
