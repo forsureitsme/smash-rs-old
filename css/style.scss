@@ -3,7 +3,7 @@
 {% for color in site.data.info.color %}
 $site-color-{{ color.key }}: {{ color.value }};
 .color-{{ color.key }} {
-    color: {{ color.value }};
+	color: {{ color.value }};
 }
 {% endfor %}
 
@@ -129,12 +129,12 @@ $header-video-blur: 2px;
 						i
 						{
 							margin-right: 1em;
-						    width: 30px;
-						    height: 30px;
-						    display: inline-block;
-						    vertical-align: middle;
-						    background-position: center;
-						    background-size: cover;
+							width: 30px;
+							height: 30px;
+							display: inline-block;
+							vertical-align: middle;
+							background-position: center;
+							background-size: cover;
 						}
 					}
 				}
@@ -167,35 +167,35 @@ $header-video-blur: 2px;
 	.header-logo
 	{
 		position: absolute;
-	    z-index: 1;
-	    height: 100%;
-	    left: 50%;
-	    transform: translateX(-50%);
-	    background-image: url(../images/logo.png);
-	    mix-blend-mode: multiply;
-	    content: ' ';
-	    display: block;
-	    top: 0;
-	    width: 100%;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-color: white;
-	    background-size: contain;
+		z-index: 1;
+		height: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-image: url(../images/logo.png);
+		mix-blend-mode: multiply;
+		content: ' ';
+		display: block;
+		top: 0;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: white;
+		background-size: contain;
 	}
 
 	.header-video
 	{
 		max-height: $header-video-height;
-	    overflow: hidden;
-	    display: flex;
-	    align-items: center;
-	    opacity: 0.3;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		opacity: 0.3;
 
 		video
 		{
 			width: 100%;
 
-		    -webkit-filter: blur($header-video-blur);
+			-webkit-filter: blur($header-video-blur);
 			-moz-filter: blur($header-video-blur);
 			-o-filter: blur($header-video-blur);
 			-ms-filter: blur($header-video-blur);
@@ -231,6 +231,12 @@ $header-video-blur: 2px;
 	.with-thumbnail
 	{
 		position: relative;
+
+		img
+		{
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
 
 		&:before
 		{
@@ -269,4 +275,17 @@ $header-video-blur: 2px;
 	width: 20px;
 	height: 20px;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARQSURBVBgZBcFbiJRlGMDx//O832Fm9jiru6Vm5VoZa22h0YFCEbaig0QqBgV1GXQlEV5EYQRBUBfdBHURBFEh3ZQRdpDCIoTOisfC3WzTTNd1zNmZne/73ufp9xOA99ez5J6pm3elee1BizYcARVAQERAAUAEEBAREFABdWm1Ly7sPbDnyEtP/MEF+WYDS1ZvWLd/ZXNwbet8i2gVIUvRLKCJoEGQIGgiaBAkgCaCqoAKpAHSGrNHzh07/PWvG8Lz2yZeHx9rPjQ7cw6r9UG9n2g9Yu8/YtHBBEyViGPiGE7EiWZEd9wiXvVoLh8ZNfKBJK/VN7cuLCCxzeB9z9G4fSvWvkA8P0116geqme/g4klUa2jSQBREBVFQFRCIhZNYl76hvs2JuvRHNzQB7Wsi9SFCfYgwOk42MYUXHarje6l+eRfmf0caw4gKqgICVjmxcKqyQkX61cUtpEKo5cQzh6lO/YxdnAUAQLIG6eRW6o9/SLL+KaRso0QQwSonFk4sjapwcDeZfWH93GAmSwp3WGwhtkgYGCZdvoZ0zRTp5Bak/woAAOzIR8TvXsE8JcZALAwrnESUVtfmw7MbV+ys59KIVZf8hrvJ1mxE0wSfO0Y88Sl28is0zdErJwGQsbVQH6U8+gUxJlgFsTQ0CotGNxEBDYJUHfLJh8lueRQAm58mHt1DPPge5Zc7Ye4oYdPLoAlh7VbC2ZP0vn0bT5rEwlExQFAACYImAl4BAKAj46T37CB/7APCNXcTf32Hct+LAABkG3cgSyeoFtpY5Vjl4BCe3bR8Z18jNCwEuPw3dvYgLM4jQ1cjSY40lhKuu5945hDlwY+hMUZYcSuiARpL6Py4BydDXSiDdFUENAiaZXBphnjkI8q9z1Hu3oad+hYA8iGS+1/DGivo7HsDa50BoLZ2inDlBFW3i5WOOSgCmoAmgqijg8sIV62Dy39RffYM9ud+ALR5DekdT1OcmaZ74EMA0EB+073EhQ5WOURQEUGCINZDR1aRb3uXbPtukqlXscrpfbEL71wEILt1CzJ0LZ3fPserAoD8hjtxyYilAaAAqoLEDsnN25HmOIQMXfMIjK2jOH2C4tAnAOjAKOHq2yhmT1D9OwNAOrYKak2srHAHRURRQUICl2YAAKDsUrXOYZZTTP8EAECyYpKy1SL+NwdAGB5D+0ewokQETSx6mzQ0tT6AnfgY1xoMr6Y4tIdq7jQWBij+mWbxt704QnnuLzw0WPhlH9XlS3iMxMUeeZJRCm05tmPizRvvWvlMtXCJWBixfZnYi8SYYNSJpRF7JXGhjZXgkmGSE9ttrCiJleHa4PqbljHTnX8rbOie/2FweHBzc/nIaBIdPEOkhkiGRkEMlEAINUKoIZKgBiFkhLRGrdHPytVLOVu1j//x06EnBeCdcZZu2jLxUt/wwANmPmzmuIG7gwMO7o45YADgDgKkmbSiLX5+YP/hXY99z9z/hjUFk2WJW2QAAAAASUVORK5CYII=);
+}
+
+@media (max-width: 800px) {
+	.navbar-collapse .navbar-nav {
+		width: 100%;
+		margin: 0;
+
+		li {
+			width: 49%;
+			display: inline-block;
+			text-align: center;
+		}
+	}
 }
