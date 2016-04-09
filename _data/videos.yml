@@ -1,17 +1,13 @@
 sections:
-  -
-    name: 23º Animextreme
-    image: ax23.png
+  - name: 23º Animextreme
+    image: /images/video-sections/ax23.png
     videos:
-      -
-        id: UBSevKgwFbU
-        title: SmashRS|Shao (W)(Rosalina, Sheik) vs SmashRS|Lukitu (L)(Ness) - Smash 4 Grand Finals
-        date: 2016-01-26
-      -
-        id: clmA2cTV3x8
-        title: SmashRS|Lukitu (Ness, Diddy) vs SmashRS|Shao (Rosalina, Sheik) - Smash 4 Winners Finals
-        date: 2016-01-24
-      -
-        id: Rxla5gT1xFw
-        title: SmashRS|Buttelli (Bowser Jr.) vs SmashRS|Lukitu (Ness) - Smash 4 Losers Finals
-        date: 2016-01-25
+      - id: UBSevKgwFbU
+        title: 'SmashRS|Shao (W)(Rosalina, Sheik) vs SmashRS|Lukitu (L)(Ness) - Smash 4 Grand Finals'
+        date: 2016-01-26T00:00:00.000Z
+      - id: clmA2cTV3x8
+        title: 'SmashRS|Lukitu (Ness, Diddy) vs SmashRS|Shao (Rosalina, Sheik) - Smash 4 Winners Finals'
+        date: 2016-01-24T00:00:00.000Z
+      - id: Rxla5gT1xFw
+        title: 'SmashRS|Buttelli (Bowser Jr.) vs SmashRS|Lukitu (Ness) - Smash 4 Losers Finals'
+        date: 2016-01-25T00:00:00.000Z
