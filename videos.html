@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<div class="editable">
 {% for section in site.data.videos.sections %}
 	{% assign thumbnail_exists = false %}
 	{% for file in site.static_files %}
@@ -26,3 +27,4 @@ layout: default
 		</div>
 	{% endfor %}
 {% endfor %}
+</div>
