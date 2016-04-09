@@ -1577,7 +1577,7 @@ p.your-para {
     font-weight: 600;
     text-transform: uppercase;
 }
-.contact-grid input[type="text"], .contact-grid textarea {
+.contact-grid input:not([type="submit"]), .contact-grid textarea {
   width: 100%;
   padding:0.8em;
   margin: 0 0 0.8em 0;

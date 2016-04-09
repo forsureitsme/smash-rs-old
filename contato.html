@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<form action="https://formspree.io/forsureitsme@gmail.com" method="POST" class="contact-grid">
+	<input type="hidden" name="_subject" value="[smash.rs] Contato pelo site" />
+	<input type="hidden" name="_next" value="{{site.baseurl}}/obrigado.html" />
+	<label for="nome">Nome:</label>
+	<input name="nome" type="text" required>
+	<label for="_replyto">E-mail:</label>
+	<input name="_replyto" type="email" required>
+	<label for="mensagem">Mensagem:</label>
+	<textarea name="mensagem" required></textarea>
+	<label for="_gotcha">Anti-spam:</label>
+	<input type="text" name="_gotcha" id="gotcha">
+	<span class="send"><input type="submit" value="Enviar"></span>
+</form>

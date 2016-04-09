@@ -16,7 +16,7 @@ gems:
   - jekyll-paginate
 
 # jekyll-paginate configs
-paginate: 2
+paginate: 5
 # paginate_path: '/page:num'
 
 # sass
@@ -29,5 +29,5 @@ exclude:
   - LICENSE
   - README
   - "*.sublime-*"
-  
+
 future: true
