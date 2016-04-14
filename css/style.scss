@@ -30,6 +30,10 @@ $header-video-blur: 2px;
 	margin: 0 auto;
 }
 
+.navbar-toggle {
+	z-index: 1;
+}
+
 /* Don't know why it's not in bootstrap anymore*/
 .embed-responsive {
 	position: relative;
@@ -259,6 +263,19 @@ $header-video-blur: 2px;
 					color: $site-color-primary;
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	#nav-menu ul {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			width: 100%;
 		}
 	}
 }
