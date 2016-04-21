@@ -1,12 +1,12 @@
 ---
 title: Tutorial
 author: Peter
-image: /images/posts/dont-use-samus.png
+image:
 ---
 
 
-Tudo ap&oacute;s a tag de resumo ser&aacute; cortado na p&aacute;gina principal:
+Tudo após a tag de resumo será cortado na página principal:
 
-&lt;!--resumo--&gt;
+&lt;!–resumo–&gt;
 
-***Isso j&aacute; n&atilde;o aparece!***
+***Isso já não aparece!***
