@@ -1,7 +1,6 @@
 ---
 title: Funcionou?
 author: Peter
-published: false
 image: /images/posts/dont-use-samus.png
 ---
 
