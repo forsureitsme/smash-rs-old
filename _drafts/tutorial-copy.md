@@ -1,8 +1,12 @@
 ---
-title: Funcionou?
+title: Tutorial
 author: Peter
 image: /images/posts/dont-use-samus.png
 ---
 
 
-N&atilde;o est&aacute; sendo f&aacute;cil.
+Tudo ap&oacute;s a tag de resumo ser&aacute; cortado na p&aacute;gina principal:
+
+&lt;!--resumo--&gt;
+
+***Isso j&aacute; n&atilde;o aparece!***
