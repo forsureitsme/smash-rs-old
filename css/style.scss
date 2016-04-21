@@ -1,5 +1,6 @@
 ---
 ---
+
 {% for color in site.data.info.color %}
 $site-color-{{ color.key }}: {{ color.value }};
 .color-{{ color.key }} {
