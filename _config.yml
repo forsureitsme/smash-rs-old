@@ -1,11 +1,32 @@
----
-title: SmashRS
-url: http://smashrs1.siteleaf.net
-timezone: America/Sao_Paulo
-collections:
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
+url: https://smash.rs
+excerpt_separator: '&lt;!--resumo--&gt;'
+baseurl: '/smash-rs'
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# gems
+gems:
+  - jekyll-paginate
+
+# jekyll-paginate configs
+paginate: 5
+# paginate_path: '/page:num'
+
+# sass
+sass:
+  style: compressed
+
+# Exclude from Jekyll build
+exclude:
+  - Gemfile
+  - LICENSE
+  - README
+  - "*.sublime-*"
+
+future: true
