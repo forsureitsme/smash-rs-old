@@ -37,7 +37,7 @@
 					{% assign last_videos = '' | split: '|' %}
 					{% assign count = 0 %}
 					{% for video in all_videos %}
-						{% assign last_video = last_video | push: video %}
+						{% assign last_videos = last_videos | push: video %}
 						{% increment count %}
 						{% if count >= 3 %}
 							{% break %}

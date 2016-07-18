@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
 		console.log('Fetching playlists');
 
-		var playlists_json = JSON.parse(request('GET', 'https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCCz8lhD91prcrAtLqTzeKZQ&fields=items(id%2Csnippet%2Ftitle)&key='+pkg.youtube_key).getBody('utf8'));
+		var playlists_json = JSON.parse(request('GET', 'https://www.googleapis.com/youtube/v3/playlists?part=snippet&maxResults=50&channelId=UCCz8lhD91prcrAtLqTzeKZQ&fields=items(id%2Csnippet%2Ftitle)&key='+pkg.youtube_key).getBody('utf8'));
 
 		for(var k in playlists_json.items) {
 			var playlist = playlists_json.items[k];
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 		if(playlists.length > 0) {
 			for(var j in playlists){
 				console.log('Fetching videos from playlist: \n'+playlists[j].name);
-				var playlist_json = JSON.parse(request('GET', 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId='+playlists[j].id+'&fields=items(snippet(publishedAt%2CresourceId%2FvideoId%2Ctitle))&key='+pkg.youtube_key).getBody('utf8'));
+				var playlist_json = JSON.parse(request('GET', 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId='+playlists[j].id+'&fields=items(snippet(publishedAt%2CresourceId%2FvideoId%2Ctitle))&key='+pkg.youtube_key).getBody('utf8'));
 
 				for(var k in playlist_json.items) {
 					var video = playlist_json.items[k].snippet;
