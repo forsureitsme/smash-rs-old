@@ -1,0 +1,27 @@
+{
+  "name": "smash-rs",
+  "version": "1.0.0",
+  "description": "SmashRS website repository.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "grunt": "node_modules/.bin/grunt"
+  },
+  "youtube_key": "AIzaSyCjy1KwH2LhaPb3stjuNeDdXOTMZxEFgss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smashrs/smash-rs.git"
+  },
+  "author": "Pedro Cardoso da Silva (@forsureitsme)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/smashrs/smash-rs/issues"
+  },
+  "homepage": "https://github.com/smashrs/smash-rs#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "load-grunt-tasks": "^3.5.0",
+    "request": "^2.73.0",
+    "sync-request": "^3.0.1",
+    "yamljs": "^0.2.8"
+  }
+}

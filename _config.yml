@@ -28,5 +28,8 @@ exclude:
   - LICENSE
   - README
   - "*.sublime-*"
+  - package.json
+  - Gruntfile.js
+  - node_modules/
 
 future: true
