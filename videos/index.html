@@ -17,12 +17,13 @@ layout: default
 			<img src="{{site.baseurl}}{{ image_path }}" class="img-responsive" alt="{{section.name}}"/>
 		</div>
 		<div class="clearfix"></div>
+		<br>
 	{% endif %}
 
 	{% for video in section.videos %}
-		<br>
 		<div class="embed-responsive embed-responsive-16by9">
 			<iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{ video.id }}" allowfullscreen frameborder="0"></iframe>
 		</div>
+		<br>
 	{% endfor %}
 {% endfor %}
