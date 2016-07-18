@@ -36,13 +36,10 @@
 					{% endfor %}
 					{% assign last_videos = '' | split: '|' %}
 					{% assign count = 0 %}
-					{% for video in all_videos %}
-						{% assign last_videos = last_videos | push: video %}
-						{% increment count %}
-						{% if count >= 3 %}
-							{% break %}
-						{% endif %}
-					{% endfor %}
+					{% unless count >= 3 %}
+						{% assign last_videos = all_videos[count] | push: video %}
+						{% assign count = count | plus: 1 %}
+					{% endunless %}
 					{% for video in last_videos %}
 						<a href="#" class="editor-pics">
 							<div class="col-sm-3 col-xs-12 item-pic">
