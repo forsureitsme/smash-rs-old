@@ -3,8 +3,8 @@ layout: default
 ---
 
 {% for section in site.data.videos.sections %}
-	<section data-target="#{{ section.id }}" data-toggle="collapse">
-		<h3 class="tittle" role="button">{{ section.name }}</h3>
+	<section>
+		<h3 class="tittle" role="button" data-target="#{{ section.id }}" data-toggle="collapse">{{ section.name }}</h3>
 		<div class="collapse" id="{{ section.id }}">
 			{% for video in section.videos %}
 				<div class="embed-responsive embed-responsive-16by9">
