@@ -28,19 +28,15 @@
 			<div class="footer-grids">
 				<div class="col-md-4 footer-grid last-videos">
 					<h4>Últimos vídeos</h4>
-					{% assign all_videos = '' | split: '|' %}
+					{% assign last_videos = '' | split: '|' %}
 					{% for section in site.data.videos.sections %}
-						{% for video in section.videos %}
-							{% assign all_videos = all_videos | push: video | sort: 'date' | reverse %}
+						{% for video in section.videos reversed %}
+							{% if forloop.index <= 3  %}
+								{% assign last_videos = last_videos | push: video %}
+							{% endif %}
 						{% endfor %}
 					{% endfor %}
-					{% assign last_videos = '' | split: '|' %}
-					{% assign count = 0 %}
-					{% unless count >= 3 %}
-						{% assign last_videos = last_videos | push: all_videos[count] %}
-						{% assign count = count | plus: 1 %}
-					{% endunless %}
-					{% for video in last_videos %}
+					{% for video in last_videos limit:3 %}
 						<a href="#" class="editor-pics">
 							<div class="col-sm-3 col-xs-12 item-pic">
 								<img src="//img.youtube.com/vi/{{ video.id }}/0.jpg" class="img-responsive" alt=""/>
@@ -54,7 +50,7 @@
 						</a>
 					{% endfor %}
 				</div>
-				<div class="col-md-4 footer-grid hidden">
+				<!-- <div class="col-md-4 footer-grid hidden">
 					<h4>Próximos eventos</h4>
 					<div class="editor-pics">
 						<div class="col-md-3 item-pic">
@@ -90,7 +86,7 @@
 					</div>
 				</div>
 				<div class="clearfix"></div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<div class="copyright">
@@ -100,8 +96,9 @@
 
 	<a href="#top" id="toTop"> <span id="toTopHover"> </span></a>
 
-	<script type="text/javascript" src="{{ site.baseurl }}/js/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lazyyt/0.3.4/lazyYT.min.js"></script>
 	<script type="text/javascript" src="{{ site.baseurl }}/js/scripts.js"></script>
-	<script type="text/javascript" src="{{ site.baseurl }}/js/bootstrap-3.1.1.min.js"></script>
 </body>
 </html>

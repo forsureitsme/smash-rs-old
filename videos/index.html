@@ -3,27 +3,15 @@ layout: default
 ---
 
 {% for section in site.data.videos.sections %}
-	{% assign thumbnail_exists = false %}
-	{% for file in site.static_files %}
-		{% capture image_path %}{{section.image}}{% endcapture %}
-		{% if file.path == image_path %}
-			{% assign thumbnail_exists = true %}
-			{% break %}
-		{% endif %}
-	{% endfor %}
-	<h3 class="tittle">{{ section.name }}</h3>
-	{% if thumbnail_exists %}
-		<div class="col-md-12">
-			<img src="{{site.baseurl}}{{ image_path }}" class="img-responsive" alt="{{section.name}}"/>
+	<section data-target="#{{ section.id }}" data-toggle="collapse">
+		<h3 class="tittle" role="button">{{ section.name }}</h3>
+		<div class="collapse" id="{{ section.id }}">
+			{% for video in section.videos %}
+				<div class="embed-responsive embed-responsive-16by9">
+					<div class="js-lazyYT embed-responsive-item" data-youtube-id="{{ video.id }}" data-ratio="16:9" data-parameters="allowfullscreen frameborder='0'"></div>
+				</div>
+				<br>
+			{% endfor %}
 		</div>
-		<div class="clearfix"></div>
-		<br>
-	{% endif %}
-
-	{% for video in section.videos %}
-		<div class="embed-responsive embed-responsive-16by9">
-			<iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{ video.id }}" allowfullscreen frameborder="0"></iframe>
-		</div>
-		<br>
-	{% endfor %}
+	</section>
 {% endfor %}

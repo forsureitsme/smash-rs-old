@@ -14,3 +14,5 @@ if ($('.header-video video').length) {
 if ($('input[name="_gotcha"]').length) {
 	$('input[name="_gotcha"]').hide().prev('label').hide();
 };
+
+$('.js-lazyYT').lazyYT();
