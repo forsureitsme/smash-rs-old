@@ -5,7 +5,7 @@ author: 'DASH|Vinikun'
 image: 'http://i.imgur.com/7w6udGs.jpg'
 ---
 
-<strong>Olá, pessoal&#33; Há algum tempo nós planejávamos trazer um torneio pra Porto Alegre de grande escala, buscando atender às solicitações de outras pessoas da cena que queriam nos visitar e jogar conosco. Levamos um tempo estruturando a cena local para então poder lançar essa ideia e trazer a vocês...<br>
+<strong>Olá, pessoal! Há algum tempo nós planejávamos trazer um torneio pra Porto Alegre de grande escala, buscando atender às solicitações de outras pessoas da cena que queriam nos visitar e jogar conosco. Levamos um tempo estruturando a cena local para então poder lançar essa ideia e trazer a vocês...<br>
 	<br>
 	<span style="display:block;text-align:center"><img alt="Posted Image" src="http://i.imgur.com/7w6udGs.jpg"><br>
 	Créditos a DASH . BW &#124; Zord pela imagem&#33;</span><br>
