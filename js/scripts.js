@@ -22,9 +22,11 @@ $(document).ready(function() {
 
 		$('.header-video video').attr('poster', '//thumbs.gfycat.com/'+animal+'-poster.jpg');
 		['mp4','webm'].forEach(function(ext) {
-			['giant','fat'].forEach(function(size) {
-				$('.header-video video').append($('.header-video .source-template').text().replace(/ANIMAL/g, animal).replace(/EXTENSION/g, ext).replace(/SIZE/g, size));
-			});
+			$('.header-video video').append(
+				$('.header-video .source-template').text()
+					.replace(/ANIMAL/g, animal)
+					.replace(/EXTENSION/g, ext)
+			);
 		});
 	}
 
