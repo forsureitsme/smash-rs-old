@@ -37,7 +37,7 @@
 						{% endfor %}
 					{% endfor %}
 					{% for video in last_videos limit:3 %}
-						<a href="#" class="editor-pics">
+						<a href="{{ site.baseurl }}/videos?v={{ video.id }}" class="editor-pics">
 							<div class="col-sm-3 col-xs-12 item-pic">
 								<img src="//img.youtube.com/vi/{{ video.id }}/0.jpg" class="img-responsive" alt=""/>
 							</div>
